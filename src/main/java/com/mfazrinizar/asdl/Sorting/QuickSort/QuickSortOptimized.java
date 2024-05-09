@@ -1,6 +1,14 @@
 package com.mfazrinizar.asdl.Sorting.QuickSort;
 
 public class QuickSortOptimized {
+    public static void sortAscending(int[] arr) {
+        quickSortAscending(arr, 0, arr.length - 1);
+    }
+
+    public static void sortDescending(int[] arr) {
+        quickSortDescending(arr, 0, arr.length - 1);
+    }
+
     public static void quickSortAscending(int[] data, int low, int high) {
         if (low < high) {
             int pi = partitionAscending(data, low, high);
