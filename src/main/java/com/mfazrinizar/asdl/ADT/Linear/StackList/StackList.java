@@ -3,8 +3,8 @@ package com.mfazrinizar.asdl.ADT.Linear.StackList;
 import com.mfazrinizar.asdl.ADT.Linear.Node;
 
 public class StackList {
-    public Node head;
-    public int size;
+    private Node head;
+    private int size;
 
     public StackList() {
         this.head = null;
@@ -19,7 +19,7 @@ public class StackList {
         Node newNode = new Node(value);
         newNode.setNext(this.head);
         this.head = newNode;
-        size -=-1;
+        this.size++;
     }
 
     public Node pop() {
@@ -29,7 +29,7 @@ public class StackList {
         Node delNode = this.head;
         this.head = this.head.getNext();
         delNode.setNext(null);
-        this.size -= 1;
+        this.size--;
         return delNode;
     }
 

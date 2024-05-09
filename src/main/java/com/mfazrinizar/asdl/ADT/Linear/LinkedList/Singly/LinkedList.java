@@ -22,7 +22,7 @@ public class LinkedList {
         Node newNode = new Node(value);
         newNode.setNext(this.head);
         this.head = newNode;
-        size++;
+        this.size++;
     }
 
     public void insertAfter(Node prevNode, int value) {
@@ -33,21 +33,21 @@ public class LinkedList {
         Node newNode = new Node(value);
         newNode.setNext(prevNode.getNext());
         prevNode.setNext(newNode);
-        size++;
+        this.size++;
     }
 
     public void append(int value) {
         Node newNode = new Node(value);
         if (this.head == null) {
             this.head = newNode;
-            size++;
+            this.size++;
         } else {
             Node currentNode = this.head;
             while (currentNode.getNext() != null) {
                 currentNode = currentNode.getNext();
             }
             currentNode.setNext(newNode);
-            size++;
+            this.size++;
         }
     }
 
@@ -58,7 +58,7 @@ public class LinkedList {
         Node deletedNode = this.head;
         this.head = this.head.getNext();
         deletedNode.setNext(null);
-        size--;
+        this.size--;
         return deletedNode;
     }
 
@@ -69,7 +69,7 @@ public class LinkedList {
         Node deletedNode = prevNode.getNext();
         prevNode.setNext(deletedNode.getNext());
         deletedNode.setNext(null);
-        size--;
+        this.size--;
         return deletedNode;
     }
 
@@ -80,7 +80,7 @@ public class LinkedList {
         if (this.head.getNext() == null) {
             Node deletedNode = this.head;
             this.head = null;
-            size--;
+            this.size--;
             return deletedNode;
         }
         Node currentNode = this.head;
@@ -89,7 +89,7 @@ public class LinkedList {
         }
         Node deletedNode = currentNode.getNext();
         currentNode.setNext(null);
-        size--;
+        this.size--;
         return deletedNode;
     }
 

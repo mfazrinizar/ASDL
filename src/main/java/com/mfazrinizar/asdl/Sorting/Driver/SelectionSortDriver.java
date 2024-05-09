@@ -4,7 +4,7 @@ import com.mfazrinizar.asdl.Sorting.SelectionSort.SelectionSort;
 
 public class SelectionSortDriver {
     public static void main(String[] args) {
-        int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
+        int[] arr = { 64, 34, 25, -2, 4, 0, 12, 22, 11, 90 };
         SelectionSort.sortAscending(arr);
         System.out.println("Sorted array in ascending order:");
         for (int i : arr) {

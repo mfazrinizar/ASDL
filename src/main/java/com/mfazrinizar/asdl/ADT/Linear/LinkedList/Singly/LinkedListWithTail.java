@@ -27,7 +27,7 @@ public class LinkedListWithTail {
         if (this.tail == null) {
             this.tail = newNode;
         }
-        size++;
+        this.size++;
     }
 
     public void insertAfter(Node prevNode, int value) {
@@ -41,7 +41,7 @@ public class LinkedListWithTail {
         if (this.tail == prevNode) {
             this.tail = newNode;
         }
-        size++;
+        this.size++;
     }
 
     public void append(int value) {
@@ -53,7 +53,7 @@ public class LinkedListWithTail {
             this.tail.setNext(newNode);
             this.tail = newNode;
         }
-        size++;
+        this.size++;
     }
 
     public Node deleteFirst() {
@@ -65,7 +65,7 @@ public class LinkedListWithTail {
         if (this.head == null) {
             this.tail = null;
         }
-        size--;
+        this.size--;
         return deletedNode;
     }
 
@@ -78,7 +78,7 @@ public class LinkedListWithTail {
         if (this.tail == deletedNode) {
             this.tail = prevNode;
         }
-        size--;
+        this.size--;
         return deletedNode;
     }
 
@@ -90,7 +90,7 @@ public class LinkedListWithTail {
             Node deletedNode = this.head;
             this.head = null;
             this.tail = null;
-            size--;
+            this.size--;
             return deletedNode;
         }
         Node currentNode = this.head;
@@ -100,7 +100,7 @@ public class LinkedListWithTail {
         Node deletedNode = currentNode.getNext();
         currentNode.setNext(null);
         this.tail = currentNode;
-        size--;
+        this.size--;
         return deletedNode;
     }
 

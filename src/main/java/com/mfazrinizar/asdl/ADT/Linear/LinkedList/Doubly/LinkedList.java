@@ -21,7 +21,7 @@ public class LinkedList {
             this.head.setPrev(newNode);
             this.head = newNode;
         }
-        size++;
+        this.size++;
     }
 
     public void insertAfter(Node prevNode, int value) {
@@ -38,7 +38,7 @@ public class LinkedList {
         } else {
             this.tail = newNode;
         }
-        size++;
+        this.size++;
     }
 
     public void append(int value) {
@@ -51,7 +51,7 @@ public class LinkedList {
             this.tail.setNext(newNode);
             this.tail = newNode;
         }
-        size++;
+        this.size++;
     }
 
     public Node deleteFirst() {
@@ -66,7 +66,7 @@ public class LinkedList {
             this.tail = null;
         }
         deletedNode.setNext(null);
-        size--;
+        this.size--;
         return deletedNode;
     }
 
@@ -83,7 +83,7 @@ public class LinkedList {
         }
         deletedNode.setPrev(null);
         deletedNode.setNext(null);
-        size--;
+        this.size--;
         return deletedNode;
     }
 
@@ -100,8 +100,19 @@ public class LinkedList {
             this.tail.setNext(null);
         }
         deletedNode.setPrev(null);
-        size--;
+        this.size--;
         return deletedNode;
+    }
+
+    public Node getNodeAt(int index) {
+        if (index < 0 || index >= this.size) {
+            return null;
+        }
+        Node currentNode = this.head;
+        for (int i = 0; i < index; i++) {
+            currentNode = currentNode.getNext();
+        }
+        return currentNode;
     }
 
     public int size() {
