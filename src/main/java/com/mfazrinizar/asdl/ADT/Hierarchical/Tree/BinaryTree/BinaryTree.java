@@ -1,7 +1,5 @@
 package com.mfazrinizar.asdl.ADT.Hierarchical.Tree.BinaryTree;
 
-import java.util.List;
-
 public class BinaryTree {
     private TreeNode root;
 
@@ -9,10 +7,32 @@ public class BinaryTree {
         this.root = null;
     }
 
-    public BinaryTree(List<Integer> values) {
+    public BinaryTree(int[] values) {
         for (int value : values) {
             addLeft(this.root, value);
         }
+    }
+
+    public TreeNode insert(TreeNode node, char value) {
+        if (node == null) {
+            return new TreeNode(value);
+        }
+
+        if (value < node.getValue()) {
+            node.setLeft(insert(node.getLeft(), value));
+        } else if (value > node.getValue()) {
+            node.setRight(insert(node.getRight(), value));
+        }
+
+        return node;
+    }
+
+    public void setRoot(TreeNode root) {
+        this.root = root;
+    }
+
+    public TreeNode getRoot() {
+        return this.root;
     }
 
     public boolean isEmpty() {
@@ -96,6 +116,30 @@ public class BinaryTree {
             printPostOrder(curr.getLeft());
             printPostOrder(curr.getRight());
             System.out.print(curr.getValue() + " ");
+        }
+    }
+
+    public void printPreOrderChar(TreeNode curr) {
+        if (curr != null) {
+            System.out.print((char) curr.getValue() + " ");
+            printPreOrderChar(curr.getLeft());
+            printPreOrderChar(curr.getRight());
+        }
+    }
+
+    public void printInOrderChar(TreeNode curr) {
+        if (curr != null) {
+            printInOrderChar(curr.getLeft());
+            System.out.print((char) curr.getValue() + " ");
+            printInOrderChar(curr.getRight());
+        }
+    }
+
+    public void printPostOrderChar(TreeNode curr) {
+        if (curr != null) {
+            printPostOrderChar(curr.getLeft());
+            printPostOrderChar(curr.getRight());
+            System.out.print((char) curr.getValue() + " ");
         }
     }
 

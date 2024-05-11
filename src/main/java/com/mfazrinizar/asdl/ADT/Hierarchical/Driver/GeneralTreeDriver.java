@@ -7,6 +7,14 @@ import com.mfazrinizar.asdl.ADT.Hierarchical.Tree.GeneralTree.TreeNode;
 
 public class GeneralTreeDriver {
     public static void main(String[] args) {
+            /*   Let us create below tree
+             *              10
+             *        /   /    \   \
+             *        2  34    56   100
+             *       / \         |   /  | \
+             *      77  88       1   7  8  9
+             */
+
         TreeNode<Integer> root = new TreeNode<>(10);
         root.addChild(new TreeNode<>(2));
         root.addChild(new TreeNode<>(34));
