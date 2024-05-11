@@ -1,44 +1,52 @@
 package com.mfazrinizar.asdl.Searching.Driver;
 
-import com.mfazrinizar.asdl.Searching.BinarySearchUnsortedIndexFinder.Element;
-import com.mfazrinizar.asdl.Searching.BinarySearchUnsortedIndexFinder.ElementQuickSort;
-import com.mfazrinizar.asdl.Searching.BinarySearchUnsortedIndexFinder.BinarySearchUnsortedIndexFinder;
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import com.mfazrinizar.asdl.Searching.BinarySearch.BinarySearch;
 
 public class BinarySearchDriver {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("Enter the number of elements: ");
             int n = scanner.nextInt();
-            Element[] array = new Element[n];
+            int[] array = new int[n];
             for (int i = 0; i < n; i++) {
-                System.out.print("Enter value for element " + (i + 1) + ":");
-                int value = scanner.nextInt();
-                array[i] = new Element(value, i);
+                System.out.print("Enter value for element " + (i + 1) + ": ");
+                array[i] = scanner.nextInt();
             }
-            
+
             System.out.println("Original Array: " + java.util.Arrays.toString(array));
-            ElementQuickSort.quickSort(array, 0, array.length - 1);
-            System.out.println("Enter the element to find:");
+            System.out.println("Enter the element to find: ");
             int element = scanner.nextInt();
             System.out.println("Enter 1 to find the first occurrence, 2 to find all occurrences:");
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    Element result = BinarySearchUnsortedIndexFinder.binarySearchInUnsortedArray(array, element, 0, array.length - 1);
-                    if (result != null) {
-                        System.out.println("Element: " + result.getValue() + ", Index: " + result.getOriginalIndex());
+                    boolean result = BinarySearch.binarySearch(array, element, 0, array.length - 1);
+                    if (result) {
+                        System.out.println("Element found");
                     } else {
                         System.out.println("Element not found");
                     }
                     break;
                 case 2:
-                    Element[] results = BinarySearchUnsortedIndexFinder.binarySearchInUnsortedArrayMultiple(array, element);
-                    if (results.length == 0) {
+                    ArrayList<Integer> results = BinarySearch.binarySearchMultiple(array, element, 0, array.length - 1);
+                    if (results.isEmpty()) {
                         System.out.println("Element not found");
                     } else {
-                        for (Element resultMultiple : results) {
-                            System.out.println("Element: " + resultMultiple.getValue() + ", Index: " + resultMultiple.getOriginalIndex());
+                        System.out.println("Element found at indices: " + results.toString());
+                    }
+
+                    String resultsInString = BinarySearch.binarySearchMultipleInString(array, element, 0, array.length - 1);
+                    if (resultsInString.trim().isEmpty()) {
+                        System.out.println("Element not found");
+                    } else {
+                        System.out.println("Element found at indices: " + resultsInString.toString());
+
+                        String[] indexArray = resultsInString.split(" ");
+                        for (String index : indexArray) {
+                            System.out.println("Found at index: " + index);
                         }
                     }
                     break;
@@ -46,7 +54,6 @@ public class BinarySearchDriver {
                     System.out.println("Invalid choice");
                     break;
             }
-            System.out.print("\nElement after sorted: " + java.util.Arrays.toString(array));
         }
     }
 }
