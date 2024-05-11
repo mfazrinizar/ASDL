@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl.ADT.Linear;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution  : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 public class Node {
     Node next;
     int value;

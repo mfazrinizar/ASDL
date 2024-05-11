@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 // Ignore this file
 
 public class Ziggurat {

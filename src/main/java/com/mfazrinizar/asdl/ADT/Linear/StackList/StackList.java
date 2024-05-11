@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl.ADT.Linear.StackList;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution  : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 import com.mfazrinizar.asdl.ADT.Linear.Node;
 
 public class StackList {

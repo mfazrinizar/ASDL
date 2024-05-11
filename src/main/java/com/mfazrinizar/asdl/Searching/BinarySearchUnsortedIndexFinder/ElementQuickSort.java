@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl.Searching.BinarySearchUnsortedIndexFinder;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution  : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 public class ElementQuickSort {
     public static void quickSort(Element[] data, int low, int high) {
         if (low < high) {

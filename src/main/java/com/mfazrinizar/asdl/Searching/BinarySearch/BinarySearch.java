@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl.Searching.BinarySearch;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution  : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 import java.util.ArrayList;
 
 public class BinarySearch {

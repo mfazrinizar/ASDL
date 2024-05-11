@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl.ADT.Linear.Queue;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution  : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 class GenericNode<T> {
     private T value;
     private GenericNode<T> next;

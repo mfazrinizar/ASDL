@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl.ADT.Hierarchical.Tree.GeneralTree;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution  : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 import com.mfazrinizar.asdl.ADT.Linear.LinkedList.Doubly.GenericLinkedList;
 import com.mfazrinizar.asdl.ADT.Linear.LinkedList.Doubly.GenericNode;
 

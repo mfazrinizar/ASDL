@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl.Searching.Driver;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution  : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 import java.util.Scanner;
 
 import com.mfazrinizar.asdl.Searching.BinarySearchUnsortedIndexFinder.BinarySearchUnsortedIndexFinder;

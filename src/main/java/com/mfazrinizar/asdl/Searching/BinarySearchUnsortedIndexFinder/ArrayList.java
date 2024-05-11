@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl.Searching.BinarySearchUnsortedIndexFinder;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution  : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 public class ArrayList {
     private Element[] elements;
     private int size;

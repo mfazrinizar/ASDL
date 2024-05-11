@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl.Searching.BinarySearchUnsortedIndexFinder;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution  : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 public class BinarySearchUnsortedIndexFinder {
     public static Element[] binarySearchInUnsortedArrayMultiple(Element[] array, int element) {
         ElementQuickSort.quickSort(array, 0, array.length - 1);

@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl.ADT.Basic;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution  : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 public final class Poin {
     private final int x, y;
 

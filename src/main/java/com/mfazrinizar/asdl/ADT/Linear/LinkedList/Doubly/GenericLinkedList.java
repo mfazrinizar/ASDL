@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl.ADT.Linear.LinkedList.Doubly;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution  : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 public class GenericLinkedList<T> {
     private GenericNode<T> head;
     private GenericNode<T> tail;

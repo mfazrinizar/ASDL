@@ -115,6 +115,14 @@ public class LinkedList {
         return currentNode;
     }
 
+    public Node getHead() {
+        return this.head;
+    }
+
+    public Node getTail() {
+        return this.tail;
+    }
+
     public int size() {
         return this.size;
     }

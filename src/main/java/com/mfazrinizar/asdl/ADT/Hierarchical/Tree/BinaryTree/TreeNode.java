@@ -1,5 +1,11 @@
 package com.mfazrinizar.asdl.ADT.Hierarchical.Tree.BinaryTree;
 
+/*
+ * Author       : M. Fazri Nizar
+ * Institution  : Sriwijaya University
+ * GitHub       : github.com/mfazrinizar/ASDL
+ */
+
 public class TreeNode {
     private int value;
     private TreeNode left;
