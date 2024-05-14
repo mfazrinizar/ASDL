@@ -45,5 +45,4 @@ public class BinarySearchUnsortedIndexFinder {
             return binarySearchInUnsortedArray(array, element, left, mid - 1);
         }
     }
-
 }

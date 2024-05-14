@@ -30,5 +30,4 @@ public class Element {
     public int getOriginalIndex() {
         return this.originalIndex;
     }
-
 }

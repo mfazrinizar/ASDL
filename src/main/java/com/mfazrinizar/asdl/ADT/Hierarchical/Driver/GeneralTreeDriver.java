@@ -15,7 +15,7 @@ public class GeneralTreeDriver {
     public static void main(String[] args) {
             /*   Let us create below tree
              *              10
-             *        /   /    \   \
+             *         /   /   \    \
              *        2  34    56   100
              *       / \         |   /  | \
              *      77  88       1   7  8  9
