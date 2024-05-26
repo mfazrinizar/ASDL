@@ -13,13 +13,31 @@ public class BinaryTree {
         this.root = null;
     }
 
+    public BinaryTree(int value) {
+        this.root = new TreeNode(value);
+    }
+
     public BinaryTree(int[] values) {
         for (int value : values) {
-            addLeft(this.root, value);
+            insert(this.root, value);
         }
     }
 
     public TreeNode insert(TreeNode node, char value) {
+        if (node == null) {
+            return new TreeNode(value);
+        }
+
+        if (value < node.getValue()) {
+            node.setLeft(insert(node.getLeft(), value));
+        } else if (value > node.getValue()) {
+            node.setRight(insert(node.getRight(), value));
+        }
+
+        return node;
+    }
+
+    public TreeNode insert(TreeNode node, int value) {
         if (node == null) {
             return new TreeNode(value);
         }
